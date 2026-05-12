@@ -85,3 +85,5 @@ docker exec -it php sh
 php artisan make:migration <nom de la migration>
 
 ## Migrer les modifications de schema vers la base de données
+
+## Bonsoir
