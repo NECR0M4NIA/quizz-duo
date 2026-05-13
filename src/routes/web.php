@@ -1,11 +1,11 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\QuizzController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/quizzs', [QuizzController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
