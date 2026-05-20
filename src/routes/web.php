@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/quizzs', [QuizzController::class, 'index']);
 
+Route::get('/quizzs/{id}', [QuizzController::class, 'showById']);
+
 Route::get('/dashboard', [ProfileController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

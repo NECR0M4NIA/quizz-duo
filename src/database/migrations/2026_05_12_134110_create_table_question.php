@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('logo_url');
+            $table->boolean('order');
+            $table->boolean('correctId_answer');
+            $table->foreignId('quizz_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }
